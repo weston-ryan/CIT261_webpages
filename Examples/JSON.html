@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON </title>
+<script type="text/javascript">
+
+function getNames(){
+var fullName = {'first': document.getElementById('firstName').value, 'middle': document.getElementById('midName').value, 		'last':document.getElementById('lastName').value};
+var result = JSON.stringify(fullName);
+return result;
+}
+
+function parseFunction(){
+var array = JSON.parse(getNames());
+document.getElementById('output').innerHTML = array.first + " " + array.middle + " " +array.last;
+}
+
+function employeeArray(){
+var employees = [
+{'name': 'John Smith', 'position': 'Partner', 'rate': '$100.00/hour'},
+{'name': 'Carl McNeal', 'position': 'Manager', 'rate': '$50.00/hour'},
+{'name': 'Travis Harris', 'position': 'senior', 'rate':'$18.00/hour'},
+{'name': 'Marcus Michaels', 'position':'intern', 'rate':'$8.00/hour'}
+];
+var result = JSON.stringify(employees);
+return result;
+}
+function getEmployeeList(){
+var eList = JSON.parse(employeeArray());
+var eNum = document.getElementById('eNumber').value;
+document.getElementById('output').innerHTML = eList[eNum].name + " " + eList[eNum].position + " " + eList[eNum].rate;
+}
+
+</script>
+</head>
+<body>
+<p>
+Please enter your first name: <input type="text" size="12" id="firstName" value="Richard"> <br>
+Please enter your middle name: <input type="text" size="12" id="midName" value="Lyle"><br>
+Please enter your last name: <input type="text" size="18" id="lastName" value="Christensen"><br>
+
+</p>
+<div>
+<button type="button" onclick="parseFunction()">See Name</button><br><br>
+</div>
+<div>
+<input type="number" id='eNumber' min='0' max='3' size='2' value='0'>
+<button type="button" onclick="getEmployeeList()">See Employee List</button>
+
+</div>
+<div id="output"></div>
+
+
+</body>
+</html>

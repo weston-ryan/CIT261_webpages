@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Changing CSS in JavaScript</title>
+<link rel="stylesheet" type="text/css" href="traffic.css">
+<script type="text/javascript">
+var stop, slow, go;
+
+window.onload = function() {
+var buttonThree = document.getElementById("b3");
+
+stop  = document.getElementById("red");
+slow  = document.getElementById("yellow");
+go  = document.getElementById("green");
+//buttonOne.addEventListener("click", function () {box.style.background = "red";});
+//buttonTwo.addEventListener("click", function () {box.style.background = "green";});
+
+buttonThree.addEventListener("click", changeToGreen);
+
+
+};
+
+function changeToRed(){
+stop.style.backgroundColor= "red";
+slow.style.backgroundColor= "white";
+go.style.backgroundColor= "white";
+}
+
+function changeToYellow(){
+stop.style.backgroundColor= "white";
+slow.style.backgroundColor= "yellow";
+go.style.backgroundColor= "white";		
+setTimeout(changeToRed, 1000);
+}
+
+function changeToGreen(){
+stop.style.backgroundColor= "white";
+slow.style.backgroundColor= "white";
+go.style.backgroundColor= "green";
+setTimeout(changeToYellow, 2000);
+}
+</script>
+</head>
+
+<body>
+<div class="circle" id="red"></div>
+<div class="circle" id="yellow"></div>
+<div class="circle" id="green"></div>
+<div>
+
+<button type="button" id="b3">Let's go!! </button>
+</div>
+<!--<script>setUp();</script>-->
+
+</body>
+
+</html>
