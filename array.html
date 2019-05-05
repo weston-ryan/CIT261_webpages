@@ -5,15 +5,10 @@
 <head>
 <title>Loops, Conditional, functions, Variables, Parameters</title>
     <h2>Array Example</h2>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="main.css" type="text/css" rel="stylesheet">
-    </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
-    <ul id="navlist">
-<li id="active"><a href="index.html" id="current">Home</a></li>
-</ul>
-    
 <p id="family"></p>
 <script>
 var names = ["Ryan", "Heather", "Lilly", "Kanyon", "Cole"];
@@ -42,5 +37,22 @@ document.getElementById("family").innerHTML = names[i];
     document.getElementById("loopStatement").innerHTML = txt;
     </script>
 
+
+
+    <h2>Function</h2>
+    <p>Here is a simple function for computer names</p>
+    <p id="part1"></p>
+    <p id="part2"></p>
+
+    <script>
+        myFunction();
+
+        function myFunction() {
+            var pcName = "Apple";
+            document.getElementById("part1").innerHTML = typeof pcName + " " + pcName;
+        }
+
+        document.getElementById("part2").innerHTML = typeof pcName;
+    </script>
 </body>
 </html>
