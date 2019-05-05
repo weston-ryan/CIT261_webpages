@@ -3,7 +3,8 @@
 
 <html>
 <head>
-<title>Array Example</title>
+<title>Loops, Conditional, functions, Variables, Parameters</title>
+    <h2>Array Example</h2>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -21,6 +22,20 @@ document.getElementById("family").innerHTML = names[i];
 }
 
 </script>
+
+
+    <h2>Loop</h2>
+    <p>The for statement loops through the properties of my name</p>
+    <p id="loopStatement"></p>
+<script>
+    var txt = "";
+    var person = {firstName:"Ryan", lastName:"Weston", age:41};
+    var x;
+    for (x in person) {
+        txt += person[x] + " ";
+    }
+    document.getElementById("loopStatement").innerHTML = txt;
+    </script>
 
 </body>
 </html>
