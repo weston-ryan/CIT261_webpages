@@ -38,6 +38,20 @@
         </script>
 
 
+        <h2>Loops</h2>
+        <p>The for/in statement loops through the properties of an object.</p>
+        <p id="loop"></p>
+        <script>
+            var txt = "";
+            var person = {firstName:"Ryan", lastName:"Weston", age:41};
+            var x;
+            for (x in person) {
+                txt += person[x] + " ";
+            }
+            document.getElementById("loop").innerHTML = txt;
+        </script>
+
+
 
         <h2>Function</h2>
         <p>Here is a simple function for computer names</p>
