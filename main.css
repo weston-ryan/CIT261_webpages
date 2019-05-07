@@ -35,6 +35,12 @@ h5 {
     text-align: center;
     padding-left: 7em;
 }
+
+p {
+ text-align: center;
+}
+
+
 audio {
     padding-left: 2em;
 }
